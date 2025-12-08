@@ -31,7 +31,7 @@ export default function LightSwitch() {
 
     // cleanup interval เวลา component ถูก unmount
     return () => clearInterval(interval);
-  }, [lightOn]);
+  }, []);
 
   // Toggle light + update state
   const toggleLight = async () => {
