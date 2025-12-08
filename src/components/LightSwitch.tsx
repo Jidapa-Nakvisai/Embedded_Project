@@ -26,6 +26,11 @@ export default function LightSwitch() {
     };
 
     fetchData();
+
+    const interval = setInterval(fetchData, 2000);
+
+    // cleanup interval เวลา component ถูก unmount
+    return () => clearInterval(interval);
   }, [lightOn]);
 
   // Toggle light + update state
